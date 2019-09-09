@@ -1,0 +1,26 @@
+.AboutMeInfo {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 300px;
+	margin: 5px;
+}
+
+.DrawerPaper {
+	background-color: aqua;
+}
+
+.text {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.AboutMeInfo img {
+	margin: 30px;
+	margin-top: 10px;
+	justify-content: center;
+	align-self: center;
+	border-radius: 25%;
+	border: 2px solid #000;
+	width: 200px;
+}
