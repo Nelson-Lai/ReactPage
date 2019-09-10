@@ -1,4 +1,18 @@
-.text {
-	margin-left: 10px;
-	margin-right: 10px;
+.AppDrawerText {
+	width: 150px;
+	padding-top: 75px;
+}
+
+.drawerPaper {
+	background-color: rgb(179, 187, 228) !important;
+	z-index: 0;
+}
+
+.Tabs {
+	padding-top: 10px;
+}
+
+.DividerSpacer {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
 }

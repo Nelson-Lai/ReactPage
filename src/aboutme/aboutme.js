@@ -32,7 +32,8 @@ class AboutMe extends React.Component {
 						<div className="text">
 							<Typography variant="body1">
 								Hello, I'm Nelson Lai, This is my site that I use to test
-								various things. I play video games and I love memes.
+								various things. I play video games and I love memes but I HATE
+								weebs.
 								<br /> <br />
 								Heres some dumb info about me:
 							</Typography>

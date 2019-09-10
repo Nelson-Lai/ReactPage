@@ -1,13 +1,7 @@
 import React from "react";
 import logo from "./coggers.png";
 import "./frontpage.css";
-import {
-	AppBar,
-	IconButton,
-	Toolbar,
-	Typography,
-	Button
-} from "@material-ui/core";
+import { AppBar, Toolbar, Button, Typography } from "@material-ui/core";
 import AboutMe from "./aboutme/aboutme";
 import AppDrawer from "./appDrawer/appDrawer";
 
@@ -32,8 +26,9 @@ class FrontPage extends React.Component {
 		return (
 			<div>
 				<AppDrawer />
-				<AppBar position="fixed" className="TopBar">
+				<AppBar position="fixed" className="TopBar" elevation={5}>
 					<Toolbar>
+						<Typography variant="h5">Extremely Cool Site by Nelson</Typography>
 						<div className="AboutMe" onClick={this.aboutMeOpenHandler}>
 							<Button color="primary" variant="contained" size="medium">
 								About Me!
@@ -41,12 +36,10 @@ class FrontPage extends React.Component {
 						</div>
 					</Toolbar>
 				</AppBar>
-				<div className="AboutMeDrawer">
-					<AboutMe
-						isAboutMeOpen={this.state.isAboutMeOpen}
-						closeHandler={this.aboutMeCloseHandler}
-					/>
-				</div>
+				<AboutMe
+					isAboutMeOpen={this.state.isAboutMeOpen}
+					closeHandler={this.aboutMeCloseHandler}
+				/>
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<p>Haha just testing stuff just a prank bros</p>
