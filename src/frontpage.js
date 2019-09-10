@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from "./coggers.png";
 import "./frontpage.css";
 import {
 	AppBar,
@@ -8,14 +8,15 @@ import {
 	Typography,
 	Button
 } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
 import AboutMe from "./aboutme/aboutme";
+import AppDrawer from "./appDrawer/appDrawer";
 
 class FrontPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isAboutMeOpen: false
+			isAboutMeOpen: false,
+			isAppDrawerOpen: false
 		};
 	}
 
@@ -24,20 +25,15 @@ class FrontPage extends React.Component {
 	};
 
 	aboutMeCloseHandler = () => {
-		console.log("closed");
 		this.setState({ isAboutMeOpen: false });
 	};
 
 	render() {
-		console.log("isaboutme", this.state.isAboutMeOpen);
 		return (
 			<div>
-				<AppBar position="static">
-					<Toolbar className="TopBar">
-						<IconButton edge="start" color="inherit" aria-label="menu">
-							<MenuIcon />
-						</IconButton>
-						<Typography variant="h6">Applets</Typography>
+				<AppDrawer />
+				<AppBar position="fixed" className="TopBar">
+					<Toolbar>
 						<div className="AboutMe" onClick={this.aboutMeOpenHandler}>
 							<Button color="primary" variant="contained" size="medium">
 								About Me!
@@ -45,11 +41,12 @@ class FrontPage extends React.Component {
 						</div>
 					</Toolbar>
 				</AppBar>
-				<AboutMe
-					isAboutMeOpen={this.state.isAboutMeOpen}
-					closeHandler={this.aboutMeCloseHandler}
-				/>
-
+				<div className="AboutMeDrawer">
+					<AboutMe
+						isAboutMeOpen={this.state.isAboutMeOpen}
+						closeHandler={this.aboutMeCloseHandler}
+					/>
+				</div>
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<p>Haha just testing stuff just a prank bros</p>
